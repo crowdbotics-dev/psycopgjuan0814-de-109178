@@ -29,6 +29,24 @@ function api_v1_newmo_partial_update(payload) {
 function api_v1_newmo_destroy(payload) {
   return psycopgjuandeAPI.delete(`/api/v1/newmo/${payload.id}/`)
 }
+function api_v1_newmo2_list(payload) {
+  return psycopgjuandeAPI.get(`/api/v1/newmo2/`)
+}
+function api_v1_newmo2_create(payload) {
+  return psycopgjuandeAPI.post(`/api/v1/newmo2/`, payload)
+}
+function api_v1_newmo2_retrieve(payload) {
+  return psycopgjuandeAPI.get(`/api/v1/newmo2/${payload.id}/`)
+}
+function api_v1_newmo2_update(payload) {
+  return psycopgjuandeAPI.put(`/api/v1/newmo2/${payload.id}/`, payload)
+}
+function api_v1_newmo2_partial_update(payload) {
+  return psycopgjuandeAPI.patch(`/api/v1/newmo2/${payload.id}/`, payload)
+}
+function api_v1_newmo2_destroy(payload) {
+  return psycopgjuandeAPI.delete(`/api/v1/newmo2/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return psycopgjuandeAPI.post(`/api/v1/signup/`, payload)
 }
@@ -98,6 +116,12 @@ export const apiService = {
   api_v1_newmo_update,
   api_v1_newmo_partial_update,
   api_v1_newmo_destroy,
+  api_v1_newmo2_list,
+  api_v1_newmo2_create,
+  api_v1_newmo2_retrieve,
+  api_v1_newmo2_update,
+  api_v1_newmo2_partial_update,
+  api_v1_newmo2_destroy,
   api_v1_signup_create,
   modules_articles_article_list,
   modules_articles_article_create,
